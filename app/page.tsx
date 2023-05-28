@@ -15,7 +15,7 @@ export default function Home() {
 
         <div className={styles.tagContainer}>
           <a
-            href="mailto:cengiz.guertusgil@gmail.com"
+            href="mailto:contact@cengizgil.com"
             className={styles.regularTag}
           >
             Contact
