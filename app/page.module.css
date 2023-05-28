@@ -4,7 +4,12 @@
 
 .introContainer {
   display: flex;
-  text-align: left;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .timeContainer {
@@ -13,6 +18,7 @@
   justify-content: flex-end;
   font-weight: 700;
   font-size: 22px;
+  order: 1;
 }
 
 .bio {
@@ -21,45 +27,21 @@
 
 .spinningText {
   margin: 32px 0;
-  display: inline-block;
   font: 700 8vw helvetica, sans-serif;
   animation: spin 5s linear infinite;
-}
-
-@media (max-width: 768px) {
-  .introContainer {
-    flex-direction: column;
-  }
-
-  .introSection {
-    text-align: center;
-  }
-
-  .bio {
-    margin-right: 0;
-  }
-
-  .timeContainer {
-    margin: 24px 0;
-    font-weight: 700;
-    font-size: 22px;
-    justify-content: center;
-  }
-
-  .spinningText {
-    text-align: center;
-  }
-}
-
-.blink {
-  animation: blink 2s infinite;
+  transform-origin: center;
+  text-align: start;
+  order: 2;
 }
 
 .tagContainer {
   display: flex;
   gap: 10px;
-  margin-top: 32px;
-  margin-bottom: 8px;
+  margin: 32px 0;
+}
+
+.blink {
+  animation: blink 2s infinite;
 }
 
 .regularTag,
@@ -85,18 +67,39 @@
   margin-left: auto;
 }
 
+@media (max-width: 768px) {
+  .introContainer {
+    flex-direction: column;
+  }
+
+  .timeContainer {
+    order: 2;
+    justify-content: center;
+    margin: 24px 0;
+  }
+
+  .spinningText {
+    order: 1;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .bio {
+    margin-right: 0;
+  }
+}
+
 @keyframes spin {
-  from {
+  0%, 100% {
     transform: rotateY(0deg);
   }
-  to {
-    transform: rotateY(1turn);
+  50% {
+    transform: rotateY(180deg);
   }
 }
 
 @keyframes blink {
-  0%,
-  100% {
+  0%, 100% {
     opacity: 0;
   }
   50% {
