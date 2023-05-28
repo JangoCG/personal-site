@@ -9,7 +9,7 @@ const courier_prime = Courier_Prime({
 
 export const metadata = {
   title: "Cengiz Gürtusgil™",
-  description: "Personal website of Cengiz Gürtusgil",
+  description: "Personal website of Cengiz Gürtusgil"
 };
 
 export default function RootLayout({
