@@ -1,95 +1,43 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Link from "next/link";
+import styles from "./page.module.css";
+import TimeComponent from "../components/time-component";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <section className={styles.introSection}>
+        <div className={styles.introContainer}>
+          <div className={styles.bio}>
+            Born in Heidenheim, Baden-Wuerttemberg, Germany in 1995, Cengiz is a determined software engineer.
+            <br />
+            <br />
+            Starting with a secondary school education, he embarked on an ambitious educational journey, demonstrating his extraordinary ability to learn quickly. Despite not having the typical university entrance qualifications, he successfully completed a degree in Business IT from Fulda University of Applied Sciences, rapidly acquiring a vast amount of knowledge in a short time.
+            <br />
+            <br />
+            Currently, he balances a full-time role at Exxeta with his pursuit of a Master's degree in Mobile and Distributed Computing from Wilhelm Büchner University of Technology.
+            <br />
+            <br />
+            At Exxeta, while he has developed various modern web applications as a Full Stack Developer, his key role lies in leading the front-end development, leveraging his expertise in technologies like Angular, React, and Spring Boot.
+            <br />
+            <br />
+            In the sphere of software engineering, Cengiz nurtures a profound passion and a commitment to maintaining high code quality. His quick learning ability allows him to apply newly acquired knowledge to complex problems, thus infusing his professional approach with resilience and dedication. This balance between his career and academics illustrates his adaptability and drive.
+          </div>
+          <div className={styles.timeContainer}>
+            <TimeComponent />
+          </div>
         </div>
-      </div>
+        <h1 className={styles.spinningText}>Cengiz Gürtusgil™</h1>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+        <div className={styles.tagContainer}>
+          <a href="mailto:cengiz.guertusgil@gmail.com" className={styles.regularTag}>Contact</a>
+          <Link href="https://www.linkedin.com/in/cengiz-guertusgil/" className={styles.regularTag}>
+            LinkedIn
+          </Link>
+          <Link href="https://github.com/JangoCG" className={styles.githubTag}>
+            GitHub™ <span className={styles.blink}>✨</span>&nbsp;
+          </Link>
+        </div>
+      </section>
+    </>
+  );
 }
