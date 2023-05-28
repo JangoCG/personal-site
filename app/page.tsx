@@ -5,7 +5,7 @@ import TimeComponent from "../components/time-component";
 export default function Home() {
   return (
     <>
-     <section className={styles.introSection}>
+      <section className={styles.introSection}>
         <div className={styles.titleContainer}>
           <p className={styles.spinningText}>Cengiz Gürtusgil™</p>
           <div className={styles.timeContainer}>
@@ -20,15 +20,20 @@ export default function Home() {
           >
             Contact
           </a>
-          <Link
+          <a
             href="https://www.linkedin.com/in/cengiz-guertusgil/"
+            target="_blank"
             className={styles.regularTag}
           >
             LinkedIn
-          </Link>
-          <Link href="https://github.com/JangoCG" className={styles.githubTag}>
+          </a>
+          <a
+            target="_blank"
+            href="https://github.com/JangoCG"
+            className={styles.githubTag}
+          >
             GitHub™ <span className={styles.blink}>✨</span>&nbsp;
-          </Link>
+          </a>
         </div>
         <div className={styles.introContainer}>
           <div className={styles.bio}>
@@ -62,7 +67,6 @@ export default function Home() {
             resilience and dedication. This balance between his career and
             academics illustrates his adaptability and drive.
           </div>
-        
         </div>
       </section>
     </>
